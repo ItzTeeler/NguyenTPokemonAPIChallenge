@@ -452,7 +452,5 @@ const loadPikachu = () => {
     SpeciesPokemonApiFetch("pikachu");
 }
 
-document.addEventListener("DOMContentLoaded", () => {
-    loadPikachu();
-});
+loadPikachu();
 
