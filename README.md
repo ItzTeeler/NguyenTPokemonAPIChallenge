@@ -10,5 +10,9 @@ You will also be displayed with the pokemon evolution, moves, abilities, locatio
 The evolutions, once clicked on will take you to the corresponding pokemon.
 There is a button to randomize a pokemon and display it to you.
 
-Peer Reviewer - 
-Peer Review -
+Peer Reviewer - Joseph Poncini
+Peer Review - GREAT JOB!!! website is fully functional. I like the alert message that pops up when you remove a pokemon from you favorites, very nice touch. Here are some nitpicks though:
+    -On Mobile and desktop the evolutions container has a slight scroll for the standard 3 pokemon evolution series. I would make the height of the container a tad bit bigger to avoid that in the usual cases. The scroll is of course a nice touch for long evolution chains like eevee so good job there.
+    -Moves container should probably have a "Moves" header that doesn't scroll with the body
+
+Overall impressive site
