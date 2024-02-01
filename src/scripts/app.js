@@ -106,7 +106,7 @@ const DisplayEvolution = async () => {
 
         let img = document.createElement("img");
         if (imgLink == null) {
-            img.src = "../assets/pokeplanet.jpeg"
+            img.src = "./assets/pokeplanet.jpeg"
         } else {
             img.src = imgLink;
         }
@@ -166,7 +166,7 @@ const DisplayName = () => {
 const DisplayImg = () => {
     pokemonImgDisplay = currentPokemonInfo.sprites.other["official-artwork"].front_default;
     if (pokemonImgDisplay == null) {
-        pokemonImg.src = "../assets/pokeplanet.jpeg"
+        pokemonImg.src = "./assets/pokeplanet.jpeg"
     } else {
         pokemonImg.src = pokemonImgDisplay;
     }
@@ -175,7 +175,7 @@ const DisplayImg = () => {
 const DisplayImgShiny = () => {
     pokemonImgShinyDisplay = currentPokemonInfo.sprites.other["official-artwork"].front_shiny;
     if (pokemonImgShinyDisplay == null) {
-        pokemonImg.src = "../assets/pokeplanet.jpeg"
+        pokemonImg.src = "./assets/pokeplanet.jpeg"
     } else {
         pokemonImg.src = pokemonImgShinyDisplay;
     }
