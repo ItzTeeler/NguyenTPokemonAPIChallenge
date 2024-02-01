@@ -2110,6 +2110,10 @@ input:checked + .toggle-bg {
     max-height: 310px;
   }
 
+  .lg\:max-h-\[320px\] {
+    max-height: 320px;
+  }
+
   .lg\:w-\[420px\] {
     width: 420px;
   }
