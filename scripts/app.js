@@ -105,8 +105,20 @@ const DisplayEvolution = async () => {
         let pokemonId = evolutionData.id;
 
         let img = document.createElement("img");
-        img.src = imgLink;
-        img.classList.add("rounded-[200px]", "border-white", "border-[5px]", "w-[200px]", "h-[200px]", "drop-shadow-lg", "cursorImg");
+        if (imgLink == null) {
+            img.src = "../assets/pokeplanet.jpeg"
+        } else {
+            img.src = imgLink;
+        }
+
+        img.classList.add(
+            "rounded-[200px]",
+            "border-white",
+            "border-[5px]",
+            "w-[200px]",
+            "h-[200px]",
+            "drop-shadow-lg",
+            "cursorImg");
 
         img.addEventListener("click", () => {
             PokemonApiFetch(evolutionName);
@@ -115,11 +127,19 @@ const DisplayEvolution = async () => {
 
         let nameP = document.createElement("p");
         nameP.textContent = CapitalFirstLetter(evolutionName);
-        nameP.classList.add("font-[Orbitron-Bold]", "text-[1.875rem]", "text-center", "text-white");
+        nameP.classList.add(
+            "font-[Orbitron-Bold]",
+            "text-[1.875rem]",
+            "text-center",
+            "text-white");
 
         let idP = document.createElement("p");
         idP.textContent = `#${pokemonId}`;
-        idP.classList.add("font-[Orbitron-Bold]", "text-[1.875rem]", "text-center", "text-[#A4ACAF]");
+        idP.classList.add(
+            "font-[Orbitron-Bold]"
+            , "text-[1.875rem]",
+            "text-center",
+            "text-[#A4ACAF]");
 
         div.appendChild(img);
         div.appendChild(nameP);
@@ -145,12 +165,20 @@ const DisplayName = () => {
 
 const DisplayImg = () => {
     pokemonImgDisplay = currentPokemonInfo.sprites.other["official-artwork"].front_default;
-    pokemonImg.src = pokemonImgDisplay;
+    if (pokemonImgDisplay == null) {
+        pokemonImg.src = "../assets/pokeplanet.jpeg"
+    } else {
+        pokemonImg.src = pokemonImgDisplay;
+    }
 }
 
 const DisplayImgShiny = () => {
     pokemonImgShinyDisplay = currentPokemonInfo.sprites.other["official-artwork"].front_shiny;
-    pokemonImg.src = pokemonImgShinyDisplay
+    if (pokemonImgShinyDisplay == null) {
+        pokemonImg.src = "../assets/pokeplanet.jpeg"
+    } else {
+        pokemonImg.src = pokemonImgShinyDisplay;
+    }
 }
 
 const CapitalFirstLetter = (userInput) => {
@@ -164,7 +192,6 @@ const CapitalFirstLetter = (userInput) => {
 const DisplayElement = () => {
     pokemonElementArray = [];
     currentPokemonInfo.types.map(e => pokemonElementArray.push(e.type.name));
-    console.log(pokemonElementArray);
     for (let i = 0; i < pokemonElementArray.length; i++) {
         pokemonElementArray[i] = CapitalFirstLetter(pokemonElementArray[i]);
     }
@@ -358,7 +385,7 @@ getFavoriteBtn.addEventListener("click", () => {
             "font-[Orbitron-Bold]",
             "text-black",
             "dark:text-white",
-            "bg-white", 
+            "bg-white",
             "w-full",
             "rounded-l-lg",
             "px-2",
